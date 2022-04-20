@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+    id 'fabric-loom' version '0.11-SNAPSHOT' apply false
+}
+
+subprojects{
+    apply plugin: 'java'
+    apply plugin: 'fabric-loom'
+
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+
+    archivesBaseName = project.archives_base_name
+    version = project.mod_version
+    group = project.maven_group
+
+    dependencies {
+        modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    }
+}
+
+group 'dev.kosmx.brekingThings'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+}
+
+test {
+    useJUnitPlatform()
+}
