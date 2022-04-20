@@ -12,7 +12,7 @@ repositories {
 dependencies {
 
     minecraft "com.mojang:minecraft:1.16.5"
-    mappings loom.officialMojangMappings()
+    mappings "net.fabricmc:yarn:1.16.5+build.10:v2"
 
     // Fabric API. This is technically optional, but you probably want it anyway.
     //modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
